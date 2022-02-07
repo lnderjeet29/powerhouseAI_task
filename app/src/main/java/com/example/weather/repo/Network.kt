@@ -8,7 +8,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object Network {
     private val BASIC_URL="https://api.openweathermap.org"
-    const  val apikey="71ff051dd28528c0b4d875a84572ec98"
+    const  val apikey=//<your api key>
     fun getApiServices():ApiService{
         val logging=HttpLoggingInterceptor()
         logging.setLevel(HttpLoggingInterceptor.Level.BASIC)
