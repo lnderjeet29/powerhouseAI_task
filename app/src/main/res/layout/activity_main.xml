@@ -10,7 +10,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <com.google.android.material.progressindicator.CircularProgressIndicator
             android:id="@+id/progres"
@@ -175,5 +175,211 @@
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             tools:listitem="@layout/fragment_item_all_day_data" />
 
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/rc_item">
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            android:elevation="10dp"
+            android:layout_margin="10dp">
+           <androidx.appcompat.widget.LinearLayoutCompat
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="@drawable/graident2">
+               <androidx.appcompat.widget.AppCompatImageView
+                   android:layout_width="70dp"
+                   android:layout_height="70dp"
+                   android:src="@drawable/city"
+                   android:layout_margin="10dp"
+                   android:scaleType="fitXY"/>
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginHorizontal="10dp">
+                   <androidx.appcompat.widget.AppCompatTextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Singapore"
+                   android:layout_margin="10dp"
+                   android:textSize="18sp"
+                       android:textStyle="bold"
+                   android:textColor="@color/white"/>
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:id="@+id/singa_temp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="----"
+                   android:layout_margin="10dp"
+                   android:textSize="18sp"
+                   android:textColor="@color/white"/>
+           </androidx.appcompat.widget.LinearLayoutCompat>
+               <androidx.appcompat.widget.AppCompatImageView
+                   android:layout_width="70dp"
+                   android:layout_height="70dp"
+                   android:src="@drawable/cloud_sun"
+                   android:layout_margin="10dp"
+                   android:id="@+id/country_wheater_img"/>
+
+
+           </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </com.google.android.material.card.MaterialCardView>  <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            android:elevation="10dp"
+            android:layout_margin="10dp">
+           <androidx.appcompat.widget.LinearLayoutCompat
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="@drawable/graident2">
+               <androidx.appcompat.widget.AppCompatImageView
+                   android:layout_width="70dp"
+                   android:layout_height="70dp"
+                   android:src="@drawable/city"
+                   android:layout_margin="10dp"
+                   android:scaleType="fitXY"/>
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginHorizontal="10dp">
+                   <androidx.appcompat.widget.AppCompatTextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="New York"
+                   android:layout_margin="10dp"
+                   android:textSize="18sp"
+                       android:textStyle="bold"
+                   android:textColor="@color/white"/>
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:id="@+id/new_york_temp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="----"
+                   android:layout_margin="10dp"
+                   android:textSize="18sp"
+                   android:textColor="@color/white"/>
+           </androidx.appcompat.widget.LinearLayoutCompat>
+               <androidx.appcompat.widget.AppCompatImageView
+                   android:layout_width="70dp"
+                   android:layout_height="70dp"
+                   android:src="@drawable/cloud_sun"
+                   android:layout_margin="10dp"
+                   android:id="@+id/country_new_york_img"/>
+
+
+           </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </com.google.android.material.card.MaterialCardView>  <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            android:elevation="10dp"
+            android:layout_margin="10dp">
+           <androidx.appcompat.widget.LinearLayoutCompat
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="@drawable/graident2">
+               <androidx.appcompat.widget.AppCompatImageView
+                   android:layout_width="70dp"
+                   android:layout_height="70dp"
+                   android:src="@drawable/city"
+                   android:layout_margin="10dp"
+                   android:scaleType="fitXY"/>
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginHorizontal="10dp">
+                   <androidx.appcompat.widget.AppCompatTextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="Delhi"
+                   android:layout_margin="10dp"
+                   android:textSize="18sp"
+                       android:textStyle="bold"
+                   android:textColor="@color/white"/>
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:id="@+id/delhi_temp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="----"
+                   android:layout_margin="10dp"
+                   android:textSize="18sp"
+                   android:textColor="@color/white"/>
+           </androidx.appcompat.widget.LinearLayoutCompat>
+               <androidx.appcompat.widget.AppCompatImageView
+                   android:layout_width="70dp"
+                   android:layout_height="70dp"
+                   android:src="@drawable/cloud_sun"
+                   android:layout_margin="10dp"
+                   android:id="@+id/country_delhi_img"/>
+
+
+           </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </com.google.android.material.card.MaterialCardView>
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="10dp"
+            android:elevation="10dp"
+            android:layout_margin="10dp">
+           <androidx.appcompat.widget.LinearLayoutCompat
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:background="@drawable/graident2">
+               <androidx.appcompat.widget.AppCompatImageView
+                   android:layout_width="70dp"
+                   android:layout_height="70dp"
+                   android:src="@drawable/city"
+                   android:layout_margin="10dp"
+                   android:scaleType="fitXY"/>
+               <androidx.appcompat.widget.LinearLayoutCompat
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:orientation="vertical"
+                   android:layout_marginHorizontal="10dp">
+                   <androidx.appcompat.widget.AppCompatTextView
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="mumbai"
+                   android:layout_margin="10dp"
+                   android:textSize="18sp"
+                       android:textStyle="bold"
+                   android:textColor="@color/white"/>
+               <androidx.appcompat.widget.AppCompatTextView
+                   android:id="@+id/mubai_temp"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="----"
+                   android:layout_margin="10dp"
+                   android:textSize="18sp"
+                   android:textColor="@color/white"/>
+           </androidx.appcompat.widget.LinearLayoutCompat>
+               <androidx.appcompat.widget.AppCompatImageView
+                   android:layout_width="70dp"
+                   android:layout_height="70dp"
+                   android:src="@drawable/cloud_sun"
+                   android:layout_margin="10dp"
+                   android:id="@+id/country_mumbai_img"/>
+
+
+           </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
     </RelativeLayout>
 </androidx.core.widget.NestedScrollView>

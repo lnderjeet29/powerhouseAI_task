@@ -10,15 +10,15 @@ interface ApiService {
 
     @GET("/data/2.5/weather")
     suspend fun getWeatherDetail(
-        @Query("lat")lat:Float,
-        @Query("lon")lon:Float,
+        @Query("lat")lat:Double,
+        @Query("lon")lon:Double,
         @Query("appid")apiKey:String
     ):WeatherData
 
     @GET("/data/2.5/onecall")
     suspend fun getAllDayWeatherDetail(
-        @Query("lat")lat:Float,
-        @Query("lon")lon:Float,
+        @Query("lat")lat:Double,
+        @Query("lon")lon:Double,
         @Query("exclude")exclude:String,
         @Query("appid")apiKey:String
     ):AllWeatherData

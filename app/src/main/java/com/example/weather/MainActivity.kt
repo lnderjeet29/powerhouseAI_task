@@ -51,8 +51,18 @@ class MainActivity : AppCompatActivity() {
             binding.progres.visibility= View.GONE
 
         }
+        homeViewModel.weatherList.observe(this){
+            binding.countryWheaterImg.load(CheckForImage.checkImage(it.get(0).weather[0].icon))
+            binding.singaTemp.text="feel like "+String.format("%.2f",it.get(0).main.feels_like-273.15)+"\u2103"
+            binding.countryNewYorkImg.load(CheckForImage.checkImage(it.get(1).weather[0].icon))
+            binding.newYorkTemp.text="feel like "+String.format("%.2f",it.get(1).main.feels_like-273.15)+"\u2103"
+            binding.countryDelhiImg.load(CheckForImage.checkImage(it.get(2).weather[0].icon))
+            binding.delhiTemp.text="feel like "+String.format("%.2f",it.get(2).main.feels_like-273.15)+"\u2103"
+            binding.countryMumbaiImg.load(CheckForImage.checkImage(it.get(3).weather[0].icon))
+            binding.mubaiTemp.text="feel like "+String.format("%.2f",it.get(3).main.feels_like-273.15)+"\u2103"
+        }
+
         homeViewModel.AllWeatherDetail.observe(this){
-            Log.e("Data","Observed: $it")
             homeAdapter.submitList(it.hourly)
         }
     }
@@ -131,13 +141,13 @@ class MainActivity : AppCompatActivity() {
 
             override fun onLocationResult(p0: LocationResult) {
                 super.onLocationResult(p0)
-                p0.lastLocation.apply {
-//                    Toast.makeText(this@MainActivity,"Location latitude:- ${this.latitude} longitude:- ${this.longitude}",Toast.LENGTH_LONG).show()
+                p0.lastLocation?.apply {
+            //                    Toast.makeText(this@MainActivity,"Location latitude:- ${this.latitude} longitude:- ${this.longitude}",Toast.LENGTH_LONG).show()
 
 
                     Log.e("object_form","object created ")
-                    homeViewModel.getWeatherData(latitude.toFloat(),longitude.toFloat())
-                    homeViewModel.getAllDayWeatherData(latitude.toFloat(),longitude.toFloat())
+                    homeViewModel.getWeatherData(latitude,longitude)
+                    homeViewModel.getAllDayWeatherData(latitude,longitude)
 
                 }
                 fusedLocationProviderClient.removeLocationUpdates(this)
